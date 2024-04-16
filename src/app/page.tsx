@@ -2,6 +2,8 @@ import Link from "next/link";
 import images from "./images"
 import { db } from "~/server/db";
 
+export const dynamic = "force-dynamic";
+
 
 
 const imgUrls = images.map((imageUrl, id) => ({id: id + 1, imageUrl}))
