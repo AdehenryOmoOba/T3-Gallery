@@ -4,8 +4,6 @@ import { db } from "~/server/db";
 
 
 
-
-
 const imgUrls = images.map((imageUrl, id) => ({id: id + 1, imageUrl}))
 
 export default async function HomePage() {
@@ -16,6 +14,11 @@ export default async function HomePage() {
 
   return (
     <main className="">
+      <div>
+        {
+          posts.map((post) => (<h3 key={post.name}>- {post.name}</h3>))
+        }
+      </div>
       <div className="flex flex-wrap gap-4">
         {
           imgUrls.map(({id, imageUrl}) => (
